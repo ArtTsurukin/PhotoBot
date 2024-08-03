@@ -3,7 +3,7 @@ import pandas as pd
 import json
 from config import path_on_laptop
 
-def create_path_discs(folder:str):
+def create_path_discs(folder: str):
     c = "C:/Users/user/Desktop/Photo_Data/Discs/" + folder
     data_path = []
     p = Path(c)
@@ -14,7 +14,7 @@ def create_path_discs(folder:str):
             data_path.append(b)
     return data_path
 
-def create_path_discs_video(folder:str):
+def create_path_discs_video(folder: str):
     c = "C:/Users/user/Desktop/Photo_Data/Discs/" + folder
     data_path = []
     p = Path(c)
@@ -25,7 +25,7 @@ def create_path_discs_video(folder:str):
             data_path.append(b)
     return data_path
 
-def create_path_tyres(folder:str):
+def create_path_tyres(folder: str):
     c = "C:/Users/user/Desktop/Photo_Data/Tyres/" + folder
     data_path = []
     p = Path(c)
@@ -36,7 +36,7 @@ def create_path_tyres(folder:str):
             data_path.append(b)
     return data_path
 
-def create_path_other(folder:str):
+def create_path_other(folder: str):
     c = "C:/Users/user/Desktop/export/" + folder
     data_path = []
     p = Path(c)

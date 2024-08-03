@@ -1,17 +1,14 @@
-import telebot
-import requests
 from telebot import TeleBot
 from telebot import types
 from telebot import custom_filters
 from telebot.types import Message
 from telebot import formatting
-from pathlib import Path
 import utils
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 import messages
 import config
-#import data
+
 
 bot = TeleBot(config.BOT_TOKEN)
 
