@@ -23,12 +23,19 @@ def help_message(message: types.Message):
 @bot.message_handler(content_types=["text"])
 def send_photo(message: types.Message):
     req = message.text
+    chat_id = message.chat.id
+    user_id = message.from_user.id
+    user_first_name = message.from_user.first_name
+    user_last_name = message.from_user.last_name
+    user_username = message.from_user.username
+    user_name = f"first_name: {user_first_name}, last_name: {user_last_name}, user_name: {user_username}"
     is_send = False
+
+    utils.write_log(user_name, user_id, req, chat_id)
 
     info = utils.send_info(req)
     if info:
         bot.send_message(message.chat.id, info)
-        print(info)
 
 
     path_discs = utils.create_path_discs(req)
